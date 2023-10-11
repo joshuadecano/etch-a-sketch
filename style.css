@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 960px;
+    width: 960px;
+    margin: auto;
+}
+
+.squareClass {
+    height: 60px;
+    width: 60px;
+    border: none;
+    outline: 1px solid black;
+}
+
+#hovered {
+    background-color: grey;
+}
