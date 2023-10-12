@@ -2,21 +2,29 @@
     text-align: center;
 }
 
+#gridChange {
+    display: flex;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: honeydew;
+    margin: auto;
+    margin-bottom: 24px;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
     height: 960px;
     width: 960px;
     margin: auto;
+    border: 1px solid black;
 }
 
 .squareClass {
-    height: 60px;
-    width: 60px;
     border: none;
     outline: 1px solid black;
 }
 
 #hovered {
-    background-color: grey;
+    background-color: black;
 }
