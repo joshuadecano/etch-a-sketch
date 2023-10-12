@@ -12,7 +12,9 @@ function createGrid(num) {
         square.style.width = squareSize + 'px';
         container.appendChild(square);
         square.addEventListener("mouseover", () => {
-            square.id = 'hovered';
+            hue = Math.random() * (360 - 1) + 1;
+            squareColor = 'hsl(' + hue + ', 100%, 50%)';
+            square.style.backgroundColor = squareColor;
         });
     }
 }
