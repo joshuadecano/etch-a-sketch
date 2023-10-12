@@ -1,5 +1,3 @@
-const container = document.querySelector('#container');
-
 function createGrid(num) {
     // determine size of square (height and width)
     let squareSize = (960/num);
@@ -21,8 +19,16 @@ function createGrid(num) {
 
 function newGrid() {
     let x = prompt("How many boxes per side?");
-    clearGrid();
-    createGrid(x);
+    if (x>100) {
+        alert('Too many squares, please enter a number below 100');
+    }
+    else if (x<1) {
+        alert('Invalid entry, Enter a number between 1-100.');
+    }
+    else {
+        clearGrid();
+        createGrid(x);
+    }
 }
 
 function clearGrid() {
@@ -31,8 +37,11 @@ function clearGrid() {
         grid[i].remove();
     }
 }
+const container = document.querySelector('#container');
 
+// button to change the grid
 const dimensionBtn = document.querySelector('#gridChange');
 dimensionBtn.addEventListener('click', newGrid);
 
+// create initial 16x16 grid
 createGrid(16);
